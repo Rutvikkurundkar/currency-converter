@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Add event listener to the form submit event
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting by default
+
+            // Retrieve the values from the input fields
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Perform basic validation
+            if (!username || !password) {
+                alert('Please enter both username and password.');
+                return;
+            }
+
+            // You can add your authentication logic here
+            // For now, let's just log the credentials
+            console.log('Username:', username);
+            console.log('Password:', password);
+
+            // Redirect to the currency converter page (assuming it's index.html)
+            window.location.href = 'index.html';
+        });
+    </script>
+    <a href="index.html"></a>
+</body>
+
+</html>
